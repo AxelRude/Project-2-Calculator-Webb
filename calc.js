@@ -73,15 +73,15 @@ function calcBmi() {
     // kollar om man är underviktig
     elemCalcScreen.innerHTML = bmi + " Undervikt";
   }
-  if (elemCalcScreen.innerHTML < 25 && elemCalcScreen.innerHTML > 18.5) {
+  if (elemCalcScreen.innerHTML < 25 && elemCalcScreen.innerHTML >= 18.5) {
     // kollar om man är normalviktig
     elemCalcScreen.innerHTML = bmi + " Normalvikt";
   }
-  if (elemCalcScreen.innerHTML < 30 && elemCalcScreen.innerHTML > 25) {
+  if (elemCalcScreen.innerHTML < 30 && elemCalcScreen.innerHTML >= 25) {
     // kollar om man är överviktig
     elemCalcScreen.innerHTML = bmi + " Övervikt";
   }
-  if (elemCalcScreen.innerHTML > 30) {
+  if (elemCalcScreen.innerHTML >= 30) {
     // kollar om man är fet
     elemCalcScreen.innerHTML = bmi + " Fetma";
   }
