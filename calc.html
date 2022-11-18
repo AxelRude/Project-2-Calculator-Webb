@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="calc.css" />
+
+    <script src="calc.js" defer></script>
+
+    <title>Miniräknare</title>
+  </head>
+  <body class="container">
+    <div class="titel">Välkommen till min BMI-räknare:</div>
+    <div class="description">
+      Hur använder man den?
+      <p class="descrip-item-extra">
+        Tänk på: Om du använder '+' eller '-' när du ska räkna ut BMI, måste du
+        först räkna ut summan med hjälp av '=' innan du går vidare.
+      </p>
+      <p class="descrip-item">
+        1. Skriv in höjden i CM och klicka sedan på den gula knappen med texkten
+        "Höjd".
+      </p>
+      <p class="descrip-item">
+        2. Skriv in vikten i KG och klicka sedan på den gula knappen med med
+        texten "Vikt"
+      </p>
+      <p class="descrip-item">
+        3. När höjd och vikt är inskrvna, klicka då på den gula knappen med
+        texten "BMI"
+      </p>
+    </div>
+    <div class="main">
+      <p class="brand">Casio DX-0115 v.5</p>
+      <div class="calc-screen" id="calc-screen"></div>
+      <button class="change-btn bmi-btn" onClick="changeHeight()">Höjd</button>
+      <button class="change-btn bmi-btn" onClick="changeWeight()">Vikt</button>
+      <button class="ans-btn bmi-btn" onClick="calcBmi()">BMI</button>
+      <button class="calc-btn" value="7" onClick="addDigit('7');">7</button>
+      <button class="calc-btn" value="8" onClick="addDigit('8');">8</button>
+      <button class="calc-btn" value="9" onClick="addDigit('9');">9</button>
+      <button class="calc-btn" onClick="btnBackSpace();">&#9003;</button>
+      <button class="calc-btn" value="4" onClick="addDigit('4');">4</button>
+      <button class="calc-btn" value="5" onClick="addDigit('5');">5</button>
+      <button class="calc-btn" value="6" onClick="addDigit('6');">6</button>
+      <button class="calc-btn" value="+" onClick="addDigit('+');">+</button>
+      <button class="calc-btn" value="1" onClick="addDigit('1');">1</button>
+      <button class="calc-btn" value="2" onClick="addDigit('2');">2</button>
+      <button class="calc-btn" value="3" onClick="addDigit('3');">3</button>
+      <button class="calc-btn" value="-" onClick="addDigit('-');">-</button>
+      <button class="calc-btn" value="." id="btn-calc" onClick="addDigit('.');">
+        .
+      </button>
+      <button class="calc-btn" value="0" onClick="addDigit('0');">0</button>
+      <button class="calc-btn" value="=" id="equal-btn" onClick="calcSum();">
+        =
+      </button>
+      <button class="calc-btn" id="btn-reset" onClick="reset();">AC</button>
+    </div>
+  </body>
+</html>

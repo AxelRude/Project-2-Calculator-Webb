@@ -1,0 +1,136 @@
+/*******************************
+CSS main
+********************************/
+
+/* global styling */
+
+/*
+    Choose the colours you want for the calculator here.
+    Usage examples:
+    color: var(--fg-clr-normal); 
+    background: var(--bg-clr-light);
+    fg: foreground
+    bg: background
+    line: line color
+*/
+
+:root {
+  --fg-clr-normal: #111; /* standard for text */
+
+  --bg-clr-light: gainsboro;
+  --bg-clr-gray: darkgray;
+  --bg-clr-iceblue: aliceblue;
+
+  --line-clr-blue: lightblue;
+  --line-clr-darkgray: rgb(50, 93, 107);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  /*main container for the whole page*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  /*calc body*/
+  display: grid;
+  column-count: 4;
+  width: 25%;
+  height: 30em;
+  margin-bottom: 1%;
+  align-items: center;
+  gap: 2%;
+  background-color: rgba(0, 138, 94, 0.381);
+  border: 0.2rem solid rgb(0, 128, 88);
+  box-shadow: 1rem 1rem 2rem rgb(105, 104, 104);
+  min-width: 20%;
+  min-height: 35%;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.calc-btn {
+  /*calc buttons*/
+  height: 100%;
+  width: 5em;
+  font-size: clamp(1rem, 1vw, 2rem);
+  border-radius: 0.5rem;
+  border: 0.05rem solid;
+}
+
+.calc-screen {
+  /*calculator screen*/
+  display: flex; /*Make sure the digits are centered in the middle*/
+  flex: 1;
+  align-items: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: clamp(
+    0.55rem,
+    2vw,
+    3.5rem
+  ); /*clamp is useful if you want the page to be responsive. (minimum size, preferred size, max size) */
+  box-shadow: inset 0.2rem 0.2rem 0.5rem var(--bg-clr-gray); /*inset means that the shadow is inside the element - used here to create the illusion of a real screen.*/
+  width: 100%;
+  height: clamp(1rem, 4rem, 4rem);
+  border: 0.1rem solid var(--line-clr-darkgray);
+  background: var(--bg-clr-light);
+  color: var(--fg-clr-normal);
+  padding: 0.125rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  grid-column: span 4;
+}
+
+.ans-btn {
+  /*BMI calculating button*/
+  grid-column: span 2;
+}
+
+.bmi-btn {
+  /*height, weight and bmi-calculating buttons*/
+  height: 100%;
+  background-color: rgb(255, 233, 93);
+  border: 0.05rem solid;
+}
+
+.titel {
+  /*titeltexten*/
+  font-size: 500%;
+  font-weight: 1000;
+  margin-bottom: 4%;
+}
+
+.description {
+  /*Undertiteln*/
+  font-size: 200%;
+  font-weight: 500;
+  margin-bottom: 2%;
+}
+
+.descrip-item-extra {
+  /*"Tänk på:" texten*/
+  font-size: 50%;
+  font-weight: 200;
+}
+
+.descrip-item {
+  /*Texten som beskriver hur man använder den*/
+  font-size: 70%;
+  font-weight: 200;
+}
+
+.brand {
+  /*"märket" på toppen av miniräknaren*/
+  font-size: 70%;
+  grid-column: span 4;
+}
